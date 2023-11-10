@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instance 2</title>
+    <script src="sidescript.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body onload="disableSubmit()">
+    <h1>What have you been browsing?</h1>
+
+    <form action="process-form.php" method="post">
+            <label for="link">Link</label>
+            <input type="url" id="link" name="link">
+
+            <label for="message">Label</label>
+            <textarea id="message" name="message"></textarea>
+
+            <label for="importance">Priority</label>
+            <select id="importance" name="importance">
+                <option value="1">Important</option>
+                <option value="2" selected>Used</option>
+                <option value="3">Unimportant</option>
+            </select>
+
+            <label>
+                <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">
+                I agree to the <a href="https://youtu.be/WnflNLaKa3k?si=dOlnqHnjBIIDFcM7" target="_blank">terms and conditions</a>
+            </label>
+
+                <br>
+                <button type="submit" name="submit" id="submit">Add</button>
+    </form>
+</body>
+</html>
